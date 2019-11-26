@@ -1,5 +1,8 @@
 (add-to-list 'default-frame-alist
                        '(font . "Cascadia Code-16"))
+(setq url-proxy-services
+   '(("http" . "127.0.0.1:9090")
+     ("https" . "127.0.0.1:9090")))
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -54,6 +57,3 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(setq url-proxy-services
-   '(("http" . "127.0.0.1:9090")
-     ("https" . "127.0.0.1:9090")))
