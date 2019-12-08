@@ -45,6 +45,7 @@ There are two things you can do about this warning:
  '(abbrev-all-caps t)
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (idea-darkula)))
  '(custom-safe-themes
    (quote
@@ -67,7 +68,6 @@ There are two things you can do about this warning:
 (add-hook 'racket-mode-hook 'company-mode)
 (add-hook 'racket-repl-mode-hook 'my-racket-mode-hook)
 (add-hook 'racket-repl-mode-hook 'company-mode)
-
 
 
 (custom-set-faces
