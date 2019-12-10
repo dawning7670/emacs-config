@@ -35,6 +35,9 @@ There are two things you can do about this warning:
 (use-package slime)
 (use-package racket-mode)
 (use-package smartparens :config (show-smartparens-mode t))
+(use-package company)
+(use-package idea-darkula-theme)
+(use-package slime-company)
 
 
 (custom-set-variables
@@ -67,6 +70,8 @@ There are two things you can do about this warning:
 (add-hook 'racket-mode-hook 'company-mode)
 (add-hook 'racket-repl-mode-hook 'my-racket-mode-hook)
 (add-hook 'racket-repl-mode-hook 'company-mode)
+(require 'slime)
+(slime-setup '(slime-fancy slime-company))
 
 
 
