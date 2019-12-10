@@ -37,7 +37,6 @@ There are two things you can do about this warning:
 (use-package smartparens :config (show-smartparens-mode t))
 (use-package company)
 (use-package idea-darkula-theme)
-(use-package slime-company)
 
 
 (custom-set-variables
@@ -55,7 +54,8 @@ There are two things you can do about this warning:
     ("947190b4f17f78c39b0ab1ea95b1e6097cc9202d55c73a702395fc817f899393" "420689cc31d01fe04b8e3adef87b8838ff52faa169e69ca4e863143ae9f3a9f9" default)))
  '(package-selected-packages
    (quote
-    (company ## idea-darkula-theme dracula-theme smartparens use-package racket-mode slime macrostep))))
+    (company ## idea-darkula-theme dracula-theme smartparens use-package racket-mode slime macrostep)))
+ '(slime-company-completion (quote simple)))
 ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
@@ -71,7 +71,6 @@ There are two things you can do about this warning:
 (add-hook 'racket-mode-hook 'company-mode)
 (add-hook 'racket-repl-mode-hook 'my-racket-mode-hook)
 (add-hook 'racket-repl-mode-hook 'company-mode)
-(require 'slime)
 (slime-setup '(slime-fancy slime-company))
 
 
