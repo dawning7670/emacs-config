@@ -62,6 +62,7 @@ There are two things you can do about this warning:
 (setq racket-program "/Applications/Racket v7.4/bin/racket")
 (require 'smartparens-config)
 (setq tab-always-indent 'complete)
+(show-paren-mode 1)
 (add-hook 'after-init-hook 'global-company-mode)
 (defun my-racket-mode-hook ()
 	(set (make-local-variable 'company-backends)
